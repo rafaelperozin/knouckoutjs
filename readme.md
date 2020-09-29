@@ -9,9 +9,11 @@ When using [Knockout JS](https://knockoutjs.com/documentation/introduction.html)
 4. So you will have a bower_components folder with libraries you’ve installed
 
   ![Bower Components Folder Structure](images/bower-components-folder-strcuture.png)
+
 5. You can import into your JS using import or require (depend of you stack)OR you can add a script in your html like this
 
   ![Adding knockout script to HTML](images/adding-knockoutjs-script-to-html.png)
+
 6. $ bower initThis command will generate a bower.json file.
 
   ![Generating bower.json file](images/generating-bower-json.png)

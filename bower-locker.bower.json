@@ -1,0 +1,14 @@
+{
+  "name": "knockoutjs",
+  "authors": [
+    "Rafael Perozin <rafael.perozin@xigen.co.uk>"
+  ],
+  "description": "",
+  "main": "app.js",
+  "license": "MIT",
+  "homepage": "index.html",
+  "dependencies": {
+    "knockout": "^3.5.1",
+    "jquery": "^3.5.1"
+  }
+}

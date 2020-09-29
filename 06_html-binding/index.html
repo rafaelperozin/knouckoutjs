@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Binding | Knockout JS</title>
+</head>
+<body>
+
+    <!-- The View -->
+    <!-- try to add on the input a value like: <hr><h1>Bacon</h1><hr><h2>Belly</h2> -->
+    HTML Text <input type="text" data-bind="value: details" style="width:240px" />
+    <div data-bind="html: details"></div>
+    <!-- View ends -->
+
+    <script src="../bower_components/knockout/dist/knockout.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Observables | Knockout JS</title>
+</head>
+<body>
+
+    <!-- The View -->
+    <div class="field" style="display: flex">
+        <label for="name">Task Name:</label>
+        <input type="text" name="name" id="task-name" data-bind="value: viewModelTask.todo" />
+        <button id="done" style="margin-left: 10px;">DONE</button>
+        <!-- As the object was wrapped with ko.observable in app.js -->
+        <!-- when you change the value of input in the DOM, will change value on the object too -->
+        <!-- And you can see a prove of it on this div -->
+        <div data-bind="text: viewModelTask.todo" style="margin-left: 10px;"></div>
+        <!-- to display the object value when you click done -->
+        <div id="new-todo" style="margin-left: 10px;"></div>
+        <!-- to display the object value with JS using eventListener -->
+        <div id="new-twodo" style="margin-left: 10px;"></div>
+    </div>
+    <div data-bind="text: viewModelTask.completed"></div>
+    <div data-bind="text: viewModelTask.createdDate"></div>
+    <!-- View ends -->
+
+    <!-- Call Knockout library -->
+    <script src="../bower_components/knockout/dist/knockout.js"></script>
+    <!-- Call View Model -->
+    <script src="./app.js"></script>
+</body>
+</html>

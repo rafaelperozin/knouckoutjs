@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>With Binding Control Flow | Knockout JS</title>
+</head>
+<body>
+
+    <!-- The View -->
+    <!-- <h1 data-bind="text: name"></h1>
+    <p data-bind="with: parents">
+        Dad: <span data-bind="text: dad"></span>, 
+        Mom: <span data-bind="text: mom"></span>
+    </p> -->
+
+    <!-- ANOTHER EXAMPLE using start-end markers -->
+    <h1 data-bind="text: name"></h1>
+    <!-- ko with: parents -->
+    <!-- You can nest start-end markers like if, ifnot, etc -->
+    <p>Dad: <span data-bind="text: dad"></span>, Mom: <span data-bind="text: mom"></span></p>
+    <!-- /ko -->
+    <!-- View ends -->
+
+    <script src="../bower_components/knockout/dist/knockout.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>

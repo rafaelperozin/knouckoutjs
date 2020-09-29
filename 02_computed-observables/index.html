@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computed Observables | Knockout JS</title>
+</head>
+<body>
+
+    <!-- The View -->
+    <!-- READ ONLY -->
+    <!-- <div class="field" style="display: flex">
+        First Name: <input type="text" data-bind="value: firstName" style="margin-left: 3px; margin-right: 10px;" />
+        Last Name: <input type="text" data-bind="value: lastName" style="margin-left: 3px;" />
+    </div> -->
+    <!-- Is calling a function from app.js that merge the firstName and lastName -->
+    <!-- Full Name: <span data-bind="text: fullName"></span> -->
+    
+    <!-- READ AND WRITE -->
+    <div class="field" style="display: flex">
+        First Name: <input type="text" data-bind="value: firstName" style="margin-left: 3px; margin-right: 10px;" />
+        Last Name: <input type="text" data-bind="value: lastName" style="margin-left: 3px;" />
+    </div>
+    <!-- You can change the name on the fullName and will update the object value -->
+    Full Name: <input type="text" data-bind="value: fullName" style="margin-top: 10px;" />
+    <!-- View ends -->
+
+    <!-- Call Knockout library -->
+    <script src="../bower_components/knockout/dist/knockout.js"></script>
+    <!-- Call View Model -->
+    <script src="./app.js"></script>
+</body>
+</html>

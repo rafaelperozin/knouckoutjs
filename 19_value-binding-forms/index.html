@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Value Binding Forms | Knockout JS</title>
+</head>
+<body>
+
+    <!-- The View -->
+    
+    <!-- TWO-WAY binding. Populates textbox and sync only from textbox to model -->
+    <p>First Name: <input type="text" data-bind="value: firstName, valueUpdate: 'afterKeyDown'" /></p>
+
+    <!-- ONE-WAY binding. Populates textbox and sync both side textbox <> model -->
+    <p>Last Name: <input type="text" data-bind="value: lastName" /></p>
+
+    <!-- NO binding, doesn't react to any change -->
+    <!-- Will display true or false -->
+    <p>No Binding: <input type="text" data-bind="value: lastName > 8" /></p>
+
+    <!-- Just display first name when you change it on the TWO-WAY biding -->
+    <div data-bind="html: firstName"></div>
+
+    <!-- View ends -->
+
+    <script src="../bower_components/knockout/dist/knockout.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>

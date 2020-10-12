@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binding Context | Knockout JS</title>
+</head>
+<body>
+
+    <!-- The View -->
+
+    <!-- 
+
+        $data -> each element in the array, on this example, it's each month
+        $parent -> the parent of current object, on this example, the parent of months is viewModel
+        $index -> position of each array element, on this example, position of each month on the array)
+        $root -> viewModel
+
+     -->
+
+    <ul data-bind="foreach: months">
+        <li>The current item is: <strong data-bind="text: $data"></strong> -> <strong data-bind="text: $parent.tweets[($index())]"></strong></li>
+    </ul>
+    <!-- View ends -->
+
+    <script src="../bower_components/knockout/dist/knockout.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>

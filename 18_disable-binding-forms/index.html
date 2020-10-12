@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disable Binding Forms | Knockout JS</title>
+</head>
+<body>
+
+    <!-- The View -->
+    <p>
+        <!-- Uncheck to disable the phone number input -->
+        <input type="checkbox" data-bind="checked: hasPhone" />
+        My home telephone is the same of mobile
+    </p>
+    <p>
+        Your telephone number: 
+        <!-- It's disable by default -->
+        <input type="text" data-bind="value: phoneNumber, disable: hasPhone" />
+    </p>
+    <!-- View ends -->
+
+    <script src="../bower_components/knockout/dist/knockout.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>

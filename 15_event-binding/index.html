@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Binding | Knockout JS</title>
+</head>
+<body>
+
+    <!-- The View -->
+    <div data-bind="event: { mouseover: enableDetails, mouseout: disableDetails }">
+        Mouse over me
+    </div>
+    <div data-bind="visible: detailsEnabled">
+        <!-- Only shows when mouse over on the top element -->
+        Details
+    </div>
+    <!-- View ends -->
+
+    <script src="../bower_components/knockout/dist/knockout.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>

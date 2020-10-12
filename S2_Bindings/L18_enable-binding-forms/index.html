@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enable Binding Forms | Knockout JS</title>
+</head>
+<body>
+
+    <!-- The View -->
+    <p>
+        <!-- Check to enable the input to add a phone number -->
+        <input type="checkbox" data-bind="checked: hasPhone" />
+        I have a telephone
+    </p>
+    <p>
+        Your telephone number: 
+        <!-- It's disabled by default -->
+        <input type="text" data-bind="value: phoneNumber, enable: hasPhone" />
+    </p>
+    <!-- View ends -->
+
+    <script src="../../bower_components/knockout/dist/knockout.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>

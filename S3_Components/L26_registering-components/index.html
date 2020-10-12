@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registering Component | Knockout JS</title>
+</head>
+<body>
+
+    <!-- The View -->
+    <!-- **** This template will be added as a template on the component at app.js **** -->
+    <!-- <fieldset>
+        <legend>User Sign-up</legend>
+        <p><input type="text" placeholder="First Name" data-bind="value:firstname" /></p>
+        <p><input type="text" placeholder="Last Name" data-bind="value:lastname" /></p>
+
+        <div data-bind="html: fullname"></div>
+
+        <p><input type="email" placeholder="Email" data-bind="value:email" /></p>
+        <p><input type="password" placeholder="Password" data-bind="value:password" /></p>
+        <p><input type="button" value="Create Account" /></p>
+
+        <div>User Sign up Component</div>
+    </fieldset> -->
+
+    <!-- * ##### EXAMPLE 1: add as a HTML usual element ################################## -->
+    <!-- <div data-bind="component: {
+        name: 'usersignup',
+        params: {
+            firstname: 'James',
+            lastname: 'Bond',
+            email: '007@jb.com'
+        }
+    }"></div> -->
+
+    <!-- * ##### EXAMPLE 2: Create a custom element ###################################### -->
+    <!-- <usersignup params="{ firstname: 'James', lastname: 'Bond', email: '007@jb.com' }"></usersignup> -->
+
+    <!-- * ##### EXAMPLE 3: Without add any element, using just the knockout js syntax ### -->
+    <!-- We could pass params like on example 2 -->
+    <!-- ko component: {
+        name: 'usersignup'
+    } -->
+    <!-- /ko -->
+
+    <!-- * ##### EXAMPLE 4 Wrap template with <template> element ######################## -->
+    <template id="signup-template">
+        <fieldset>
+            <legend>User Sign-up</legend>
+            <p><input type="text" placeholder="First Name" data-bind="value:firstname" /></p>
+            <p><input type="text" placeholder="Last Name" data-bind="value:lastname" /></p>
+    
+            <div data-bind="html: fullname"></div>
+    
+            <p><input type="email" placeholder="Email" data-bind="value:email" /></p>
+            <p><input type="password" placeholder="Password" data-bind="value:password" /></p>
+            <p><input type="button" value="Create Account" /></p>
+    
+            <div>Knockout User Sign up Component</div>
+        </fieldset>
+    </template>
+
+    <!-- View ends -->
+
+    <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../../bower_components/knockout/dist/knockout.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>

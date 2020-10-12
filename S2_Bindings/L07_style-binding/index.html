@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Binding | Knockout JS</title>
+</head>
+<body>
+
+    <!-- The View -->
+    Input Marks <input type="text" data-bind="value: marks" style="width:240px" />
+    <div data-bind="style: { color: marks() < 50 ? 'red' : 'green'}">
+        Result
+    </div>
+    <!-- View ends -->
+
+    <script src="../../bower_components/knockout/dist/knockout.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>

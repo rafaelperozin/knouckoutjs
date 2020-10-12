@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Binding | Knockout JS</title>
+    <link rel="stylesheet" href="../../bower_components/jquery-ui/themes/base/jquery-ui.min.css">
+</head>
+<body>
+
+    <!-- The View -->
+    <input data-bind="datepicker: myDate, datepickerOptions: { minDate: new Date() }">
+    <hr />
+    <button data-bind="click: seToCurrentDate">Set To Current Date</button>
+    <hr />
+    <!-- Show the current date -->
+    <div data-bind="text: myDate"></div>
+    <!-- View ends -->
+
+    <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../../bower_components/jquery-ui/jquery-ui.min.js"></script>
+    <script src="../../bower_components/knockout/dist/knockout.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>

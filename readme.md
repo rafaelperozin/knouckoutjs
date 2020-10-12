@@ -8,15 +8,15 @@ When using [Knockout JS](https://knockoutjs.com/documentation/introduction.html)
 3. ```$ bower install knockout```
 4. So you will have a bower_components folder with libraries you’ve installed
 
-  ![Bower Components Folder Structure](images/bower-components-folder-strcuture.png)
+    ![Bower Components Folder Structure](images/bower-components-folder-strcuture.png)
 
 5. You can import into your JS using import or require (depend of you stack)OR you can add a script in your html like this
 
-  ![Adding knockout script to HTML](images/adding-knockoutjs-script-to-html.png)
+    ![Adding knockout script to HTML](images/adding-knockoutjs-script-to-html.png)
 
-6. $ bower initThis command will generate a bower.json file.
+6. `$ bower initThis` command will generate a bower.json file.
 
-  ![Generating bower.json file](images/generating-bower-json.png)
+    ![Generating bower.json file](images/generating-bower-json.png)
 
 ## You can use…
 - `ko.applyBings` to pass the values to the HTML
@@ -52,8 +52,22 @@ By default, Knockout will allow the click event to continue to bubble up to any 
 Normally, in this case myButtonHandler would be called first, then the click event would bubble up to myDivHandler. However, the clickBubble binding that we added with a value of false prevents the event from making it past myButtonHandler.
 
 ## Binding Context
-Have a look on the example at `11_binding-context` lesson
+Have a look on the example at `S2_Bindings/11_binding-context` folder.
 - `$data` -> each element in the array, on this example, it's each month
 - `$parent` -> the parent of current object, on this example, the parent of months is viewModel
 - `$index` -> position of each array element, on this example, position of each month on the array)
 - `$root` -> viewModel
+
+## Use custom bindings
+Use `ko.bindingHandlers` to register you custom binding and add to it these subproperties:
+- `init` will be called when the binding is first applied to an element
+- `update` will be called once when the binding is first applied to an element and again whenever any observables/computeds that are accessed change. Update the DOM element based on the supplied values here.
+
+See and example at `S2_Bindings/L25_custom-binding` folder.
+
+Read the official documentation about [custom bindings](https://knockoutjs.com/documentation/custom-bindings.html).
+
+## Components
+Use `ko.components.register` to register your component.
+
+Read the official documentation about [components](https://knockoutjs.com/documentation/component-overview.html)

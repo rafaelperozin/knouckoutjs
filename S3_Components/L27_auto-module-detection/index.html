@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Module Detection | Knockout JS</title>
+</head>
+<body>
+
+    <!-- The View -->
+    <usersignup params="{ firstname: 'James', lastname: 'Bond', email: '007@jb.com' }"></usersignup>
+    <!-- View ends -->
+
+    <!-- Set up the paths -->
+    <script src="./requirejs-config.js"></script>
+    <!-- As soon as the requirejs called will call the main.js -->
+    <script data-main="./main" src="../../bower_components/requirejs/require.js"></script>
+</body>
+</html>

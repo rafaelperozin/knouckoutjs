@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Observables Array | Knockout JS</title>
+</head>
+<body>
+
+    <!-- The View -->
+    <form data-bind="submit:addItem">
+        New Item: <input type="text" data-bind="value:itemToAdd,valueUpdate:'afterkeydown'" />
+        <!-- Will return true or false -->
+        <input type="submit" value="Add Items" data-bind="enable:itemToAdd().length>0">
+        <p>Items added</p>
+        <select multiple width="80px" data-bind="options:items"></select>
+    </form>
+    <!-- View ends -->
+
+    <!-- Call Knockout library -->
+    <script src="../../bower_components/knockout/dist/knockout.js"></script>
+    <!-- Call View Model -->
+    <script src="./app.js"></script>
+</body>
+</html>

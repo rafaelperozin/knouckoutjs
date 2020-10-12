@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If Not Binding Control Flow | Knockout JS</title>
+</head>
+<body>
+
+    <!-- The View -->
+    <!-- <ul data-bind="foreach: employees">
+        <li>
+            Name: <strong data-bind="text: name"></strong>
+            <div data-bind="ifnot: designation=='Manager'">
+                Designation: <strong data-bind="text: designation"></strong>
+            </div>
+        </li>
+    </ul> -->
+
+    <!-- ANOTHER EXAMPLE using start-end markers -->
+    <ul data-bind="foreach: employees">
+        <li>
+            Name: <strong data-bind="text: name"></strong>
+            <!-- ko ifnot: designation=='Manager' -->
+            <div>Designation: <strong data-bind="text: designation"></strong></div>
+            <!-- /ko -->
+        </li>
+    </ul>
+    <!-- View ends -->
+
+    <script src="../../bower_components/knockout/dist/knockout.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>

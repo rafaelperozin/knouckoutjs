@@ -3,9 +3,9 @@
 When using [Knockout JS](https://knockoutjs.com/documentation/introduction.html) we usually make ajax call to read and write the model data.
 
 ## Install using command line:
-1. $ npm install bower -g
+1. ```$ npm install bower -g```
 2. Create a folder of you project and use cd to navigate there
-3. $ bower install knockout
+3. ```$ bower install knockout```
 4. So you will have a bower_components folder with libraries you’ve installed
 
   ![Bower Components Folder Structure](images/bower-components-folder-strcuture.png)
@@ -19,14 +19,14 @@ When using [Knockout JS](https://knockoutjs.com/documentation/introduction.html)
   ![Generating bower.json file](images/generating-bower-json.png)
 
 ## You can use…
-- ko.applyBings to pass the values to the HTML
-- ko.observables to make the object value writable
-- ko.computed to return a function return to the HTMLYou can use read and write functions to show the full name when called on HTML and write to allow the function to change the values inside the object.
+- `ko.applyBings` to pass the values to the HTML
+- `ko.observables` to make the object value writable
+- `ko.computed` to return a function return to the HTMLYou can use read and write functions to show the full name when called on HTML and write to allow the function to change the values inside the object.
 
 ## To check and get boolean value as return you can use:
-- ko.isComputed(property)
-- ko.isObservable(property) returns true for observables, observableArrays, and computed observables.
-- ko.isWritableObservable(property): returns true for observables, observableArrays, and writable computed observables.
+- `ko.isComputed(property)`
+- `ko.isObservable(property)` returns true for observables, observableArrays, and computed observables.
+- `ko.isWritableObservable(property)`: returns true for observables, observableArrays, and writable computed observables.
 
 **Observable Arrays** you can use with any native JS array functions, but it’s better to use the equivalent functions of KO because it works on all targeted browsers.
 

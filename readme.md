@@ -50,3 +50,10 @@ By default, Knockout will allow the click event to continue to bubble up to any 
 ```
 
 Normally, in this case myButtonHandler would be called first, then the click event would bubble up to myDivHandler. However, the clickBubble binding that we added with a value of false prevents the event from making it past myButtonHandler.
+
+## Binding Context
+Have a look on the example at `11_binding-context` lesson
+- `$data` -> each element in the array, on this example, it's each month
+- `$parent` -> the parent of current object, on this example, the parent of months is viewModel
+- `$index` -> position of each array element, on this example, position of each month on the array)
+- `$root` -> viewModel
